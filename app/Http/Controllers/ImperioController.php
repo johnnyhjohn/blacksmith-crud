@@ -109,8 +109,18 @@ class ImperioController extends Controller
      * @param  \App\Imperio  $imperio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Imperio $imperio)
+    public function delete($imperioId)
     {
-        //
+        try{
+            
+            $imperio = Imperio::find($imperioId);
+            $imperio->delete();
+            
+            $imperios = Imperio::get();
+
+            return JSONUtils::returnSuccess('Império deletado com sucesso', json_encode($imperios));
+        } catch(\Exception $ex) {
+            return JSONUtils::returnDanger('Ocorreu um erro interno.', json_encode($ex));
+        }        
     }
 }

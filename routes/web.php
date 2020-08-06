@@ -18,6 +18,7 @@ Route::get('/', 'MainController@index');
 
 Route::group(['prefix' => '/imperio'], function(){
     Route::get('/', 'ImperioController@index');
+    Route::delete('/{imperioId}', 'ImperioController@delete');
     Route::get('/create', 'ImperioController@create');
     Route::get('/update/{imperioId}', 'ImperioController@edit');
     Route::post('/create', 'ImperioController@store');
