@@ -2,7 +2,7 @@
 @section('title', 'Create Impérios')
 @section('content')
     <section>
-        <h2 class="section-title">Criar Império</h2>
+        <h2 class="section-title">Criar Império<a href="/imperio" class="btn btn-primary">Voltar</a></h2>
         <div class="card">
             <div class="card-body">
                 <div id="mensagem"></div>

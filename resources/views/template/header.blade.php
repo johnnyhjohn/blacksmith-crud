@@ -9,7 +9,7 @@
             <a class="navbar-brand" href="#">Blacksmith</a>
         </div>
         <ul>
-            <li><a href="#">Império</a></li>
+            <li><a href="/imperio">Império</a></li>
             <li><a href="#">Reino</a></li>
             <li><a href="#">Vilarejo</a></li>
         </ul>
