@@ -14,13 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/tasks', 'TaskController@getTasks');
-
-
-Route::group(['prefix' => '/projects'], function(){
-    Route::get('/', 'ProjectController@getProjects');
-    Route::post('/', 'ProjectController@setProjects');
+Route::group(['prefix' => '/imperio'], function(){
+    Route::post('/create', 'ImperioController@store');
 });
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

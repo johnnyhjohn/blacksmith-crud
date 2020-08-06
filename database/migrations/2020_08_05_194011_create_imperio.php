@@ -13,7 +13,7 @@ class CreateImperio extends Migration
      */
     public function up()
     {
-        Schema::create('imperio', function (Blueprint $table) {
+        Schema::create('imperios', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('sigla', 2);
@@ -29,6 +29,6 @@ class CreateImperio extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imperio');
+        Schema::dropIfExists('imperios');
     }
 }

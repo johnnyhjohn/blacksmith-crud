@@ -18,7 +18,7 @@ class CreateReino extends Migration
             $table->string('nome');
             $table->string('sigla', 2);
             $table->unsignedBigInteger('id_imperio');
-            $table->foreign('id_imperio')->references('id')->on('imperio');
+            $table->foreign('id_imperio')->references('id')->on('imperios');
             $table->string('imagem');
             $table->timestamps();
         });

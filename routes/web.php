@@ -13,5 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any}', 'SinglePageController@index')->where('any', '.*');
+// Route::get('/', 'MainController@index')->where('any', '.*');
+Route::get('/', 'MainController@index');
 
+Route::group(['prefix' => '/imperio'], function(){
+    Route::get('/', 'ImperioController@index');
+    Route::get('/create', 'ImperioController@create');
+    Route::get('/update/{imperioId}', 'ImperioController@edit');
+    Route::post('/create', 'ImperioController@store');
+    Route::put('/update', 'ImperioController@update');
+});

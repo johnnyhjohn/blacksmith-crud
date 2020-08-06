@@ -1,0 +1,85 @@
+body {
+    background : #f5f8fb !important;
+}
+
+header{
+    width: calc(100% - 300px);
+    display: flex;
+    position: relative;
+    left: 300px;
+}
+nav.navbar {
+    min-height: 50px;
+    background: white !important;
+    border-bottom : 1px solid rgba(0,0,0,0.13);
+}
+
+#sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: #0c213a;
+}
+
+#sidebar-menu .brand {
+    padding: 20px;
+}
+
+.brand a {
+    color: white;
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar-menu li{
+    width: 100%;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(0,0,0,.25);
+    transition: all ease .2s;
+}
+#sidebar-menu li:hover{
+    background: rgba(255,255,255,.01);
+}
+
+#sidebar-menu li:hover a{
+    opacity: 1;
+}
+
+#sidebar-menu ul a {
+    color: white;
+    opacity: .8;
+    transition: all ease .2s;
+}
+
+.content {
+    position: relative;
+    margin: 15px 15px 0 320px;
+    text-align: initial;   
+}
+
+.section-title{
+    color: #2c3652;
+}
+
+#mensagem {
+    color: white;
+}
+
+.DANGER {
+    background: red;
+}
+
+.SUCCESS {
+    background: green;
+}
