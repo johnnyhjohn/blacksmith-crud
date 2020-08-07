@@ -10,7 +10,7 @@
         </div>
         <ul>
             <li><a href="/imperio">Império</a></li>
-            <li><a href="#">Reino</a></li>
+            <li><a href="/reino">Reino</a></li>
             <li><a href="#">Vilarejo</a></li>
         </ul>
     </div>

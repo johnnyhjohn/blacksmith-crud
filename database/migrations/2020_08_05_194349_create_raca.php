@@ -13,7 +13,7 @@ class CreateRaca extends Migration
      */
     public function up()
     {
-        Schema::create('raca', function (Blueprint $table) {
+        Schema::create('racas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('descricao');
@@ -29,6 +29,6 @@ class CreateRaca extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('raca');
+        Schema::dropIfExists('racas');
     }
 }

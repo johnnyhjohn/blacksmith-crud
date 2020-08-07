@@ -13,12 +13,12 @@ class CreateOficinaProduto extends Migration
      */
     public function up()
     {
-        Schema::create('oficina_produto', function (Blueprint $table) {
+        Schema::create('oficina_produtos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('oficina_id');
             $table->unsignedBigInteger('produto_id');
-            $table->foreign('oficina_id')->references('id')->on('oficina');
-            $table->foreign('produto_id')->references('id')->on('produto');
+            $table->foreign('oficina_id')->references('id')->on('oficinas');
+            $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateOficinaProduto extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oficina_produto');
+        Schema::dropIfExists('oficina_produtos');
     }
 }

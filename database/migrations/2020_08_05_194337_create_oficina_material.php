@@ -13,12 +13,12 @@ class CreateOficinaMaterial extends Migration
      */
     public function up()
     {
-        Schema::create('oficina_material', function (Blueprint $table) {
+        Schema::create('oficina_materials', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('oficina_id');
             $table->unsignedBigInteger('material_id');
-            $table->foreign('oficina_id')->references('id')->on('oficina');
-            $table->foreign('material_id')->references('id')->on('material');
+            $table->foreign('oficina_id')->references('id')->on('oficinas');
+            $table->foreign('material_id')->references('id')->on('materials');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateOficinaMaterial extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oficina_material');
+        Schema::dropIfExists('oficina_materials');
     }
 }

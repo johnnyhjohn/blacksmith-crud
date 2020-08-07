@@ -13,7 +13,7 @@ class CreateMaterial extends Migration
      */
     public function up()
     {
-        Schema::create('material', function (Blueprint $table) {
+        Schema::create('materials', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('tipo');
@@ -30,6 +30,6 @@ class CreateMaterial extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('material');
+        Schema::dropIfExists('materials');
     }
 }

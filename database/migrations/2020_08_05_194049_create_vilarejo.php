@@ -13,12 +13,12 @@ class CreateVilarejo extends Migration
      */
     public function up()
     {
-        Schema::create('vilarejo', function (Blueprint $table) {
+        Schema::create('vilarejos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('sigla', 2);
             $table->unsignedBigInteger('reino_id');
-            $table->foreign('reino_id')->references('id')->on('reino');
+            $table->foreign('reino_id')->references('id')->on('reinos');
             $table->string('imagem');
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateVilarejo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vilarejo');
+        Schema::dropIfExists('vilarejos');
     }
 }

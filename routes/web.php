@@ -24,3 +24,12 @@ Route::group(['prefix' => '/imperio'], function(){
     Route::post('/create', 'ImperioController@store');
     Route::put('/update', 'ImperioController@update');
 });
+
+Route::group(['prefix' => '/reino'], function(){
+    Route::get('/', 'ReinoController@index');
+    Route::get('/create','ReinoController@create');
+    Route::post('/create','ReinoController@store');
+    Route::get('/update/{impvariavel}','ReinoController@edit');
+    
+
+});

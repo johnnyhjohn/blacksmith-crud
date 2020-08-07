@@ -13,12 +13,12 @@ class CreateProdutoMaterial extends Migration
      */
     public function up()
     {
-        Schema::create('produto_material', function (Blueprint $table) {
+        Schema::create('produto_materials', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('material_id');
             $table->unsignedBigInteger('produto_id');
-            $table->foreign('produto_id')->references('id')->on('produto');
-            $table->foreign('material_id')->references('id')->on('material');
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->foreign('material_id')->references('id')->on('materials');
             $table->integer('quantidade');
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateProdutoMaterial extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produto_material');
+        Schema::dropIfExists('produto_materials');
     }
 }

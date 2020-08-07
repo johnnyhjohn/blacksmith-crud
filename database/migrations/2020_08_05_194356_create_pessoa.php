@@ -13,13 +13,13 @@ class CreatePessoa extends Migration
      */
     public function up()
     {
-        Schema::create('pessoa', function (Blueprint $table) {
+        Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->enum('tipo', ['ferreiro', 'cliente']);
             $table->unsignedBigInteger('oficina_id');
             $table->string('imagem');
-            $table->foreign('oficina_id')->references('id')->on('oficina');
+            $table->foreign('oficina_id')->references('id')->on('oficinas');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreatePessoa extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pessoa');
+        Schema::dropIfExists('pessoas');
     }
 }

@@ -13,7 +13,7 @@ class CreateReino extends Migration
      */
     public function up()
     {
-        Schema::create('reino', function (Blueprint $table) {
+        Schema::create('reinos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('sigla', 2);
@@ -31,6 +31,6 @@ class CreateReino extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reino');
+        Schema::dropIfExists('reinos');
     }
 }

@@ -13,7 +13,7 @@ class CreateOficina extends Migration
      */
     public function up()
     {
-        Schema::create('oficina', function (Blueprint $table) {
+        Schema::create('oficinas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('imagem');
@@ -21,7 +21,7 @@ class CreateOficina extends Migration
             $table->string('latitude');
             $table->string('longitude');
             $table->unsignedBigInteger('vilarejo_id');
-            $table->foreign('vilarejo_id')->references('id')->on('vilarejo');
+            $table->foreign('vilarejo_id')->references('id')->on('vilarejos');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateOficina extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oficina');
+        Schema::dropIfExists('oficinas');
     }
 }
