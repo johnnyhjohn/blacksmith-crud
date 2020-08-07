@@ -12,6 +12,7 @@
             <li><a href="/imperio">Império</a></li>
             <li><a href="#">Reino</a></li>
             <li><a href="#">Vilarejo</a></li>
+            <li><a href="#">Minerios</a></li>
         </ul>
     </div>
 </div>

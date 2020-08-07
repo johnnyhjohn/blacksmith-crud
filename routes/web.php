@@ -23,3 +23,7 @@ Route::group(['prefix' => '/imperio'], function(){
     Route::post('/create', 'ImperioController@store');
     Route::put('/update', 'ImperioController@update');
 });
+
+Route::group(['prefix' => '/materias'], function(){
+    Route::get('/', 'MateriaisController@index');
+});
