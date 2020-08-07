@@ -81,5 +81,11 @@ nav.navbar {
 }
 
 .SUCCESS {
-    background: green;
+    background: #29b581;
+    padding: 10px;
+}
+
+#modal-delete.open{
+    display: block;
+    background: rgba(0,0,0,0.3);
 }
